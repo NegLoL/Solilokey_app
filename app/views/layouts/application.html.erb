@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title><%= yield(:title) %> | SolilokeyApp</title>
+    <title><%= yield(:title) %> | SolilokeyApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsive.scss">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+      <%= yield %>
   </body>
 </html>

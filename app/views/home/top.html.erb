@@ -1,35 +1,16 @@
 <% provide(:title, "Top") %>
-<header>#パーシャル化してまとめる 上部固定
-    <div class="container">
-        <div class="header-logo">
-            #画像
-            <%= link_to "Solilokey", "/" %>
-        </div>
-        <nav>
-            <ul class="header-menu">
-                <li>
-                    <%= link_to "Solilokeyとは", "/about" %>
-                </li>
-                <li>
-                    <%= link_to "新規登録", "#" %>
-                </li>
-                <li>
-                    <%= link_to "ログイン", "#" %>
-                </li>
-            </ul>
-        </nav>    
-    </div>
-</header>
+
+<%= render 'home/header' %>
 
 <div class="top-page">
     <div class="container">
-        #画像
+        <!--画像-->
         <h1 class="welcome">Solilokeyへようこそ</h1>
         <h2 class="let-start">さあ利用を始めよう</h2>
-        <%= link_to "新規登録", "#" %>
+        <div class="btn-start">
+            <%= link_to "新規登録", "#" %>
+        </div>
     </div>
 </div>
 
-<footer>#センターよせ
-    <small>This app is portfolio</small>
-</footer>
+<%= render 'home/footer' %>

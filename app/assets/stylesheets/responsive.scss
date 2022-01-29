@@ -1,0 +1,22 @@
+@media all and (max-width: 767px){
+    .container {
+        max-width: 767px;
+    }
+
+    .welcome {
+        font-size:36px;
+    }
+
+    .let-start {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+}
