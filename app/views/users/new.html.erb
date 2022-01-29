@@ -1,0 +1,25 @@
+<% provide(:title, "Signup") %>
+
+<%= render 'home/header' %>
+
+<div class="new-user-page">
+    <div class="container">
+        <div class="form-box">
+            <%= form_with model: @user do |f| %>
+                <%= f.label :name %>
+                <%= f.text_field :name, class: "form-area" %>
+
+                <%= f.label :email %>
+                <%= f.email_field :email, class: "form-area" %>
+
+                <%= f.label :password %>
+                <%= f.password_field :password, class: "form-area" %>
+
+                <%= f.submit "登録する", class: "submit" %>
+            <% end %>
+        </div>
+    </div>
+</div>   
+
+
+<%= render 'home/footer' %>
