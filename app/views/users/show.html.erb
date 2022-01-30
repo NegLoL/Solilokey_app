@@ -1,0 +1,18 @@
+<% provide(:title, @user.name) %>
+
+<div class="container">
+
+    <%= render 'users/sideber' %>
+    
+    <div class="container2">
+        <div class="user-page">
+            <div class ="profile">
+                <div class="pro-img">
+                    <img src="<%= "/user_images/#{@user.image_name}" %>">
+                </div>
+                <h1><%= @user.name %></h1>
+            </div>
+        </div>
+        <!--ここに自投稿-->
+    </div>
+</div>

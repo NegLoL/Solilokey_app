@@ -17,11 +17,12 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])#仮
   end
 
 
   private
-    #ストロングパラメータ
+    #ストロングパラメータ #image_nameはattributeで初期値入れてる
     def user_params
       params.require(:user).permit(:name, :email, :password)
     end
