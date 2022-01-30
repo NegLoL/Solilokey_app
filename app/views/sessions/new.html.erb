@@ -1,0 +1,21 @@
+<% provide(:title, "Login") %>
+
+<%= render 'home/header' %>
+
+<div class="new-user-page">
+    <div class="container">
+        <div class="form-box">
+            <%= form_with scope: :session, url: login_path do |f| %>
+                <%= f.label :email %>
+                <%= f.email_field :email, class: "form-area" %>
+
+                <%= f.label :password %>
+                <%= f.password_field :password, class: "form-area" %>
+
+                <%= f.submit "ログイン", class: "submit" %>
+            <% end %>
+        </div>
+    </div>
+</div>   
+
+<%= render 'home/footer' %>
