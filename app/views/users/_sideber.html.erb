@@ -2,36 +2,54 @@
         <nav>
             <ul class="side-links">
                 <div class="side-link-box">
+                    <%= link_to "#" do %>
+                        <span class="fa fa-home side-icon-smart"></span>
+                    <% end %>
                     <span class="fa fa-home side-icon"></span>
                     <li>
                         <%= link_to "Home", "#" %>
                     </li>
                 </div>
                 <div class="side-link-box">
+                    <%= link_to "#" do %>
+                        <span class="fa fa-search side-icon-smart"></span>
+                    <% end %>
                     <span class="fa fa-search side-icon"></span>
                     <li>
                         <%= link_to "Search", "#" %>
                     </li>
                 </div>
                 <div class="side-link-box">
+                    <%= link_to "#" do %>
+                        <span class="fa fa-key side-icon-smart"></span>
+                    <% end %>
                     <span class="fa fa-key side-icon"></span>
                     <li>
                         <%= link_to "Private", "#" %>
                     </li>
                 </div>
                 <div class="side-link-box">
+                    <%= link_to "#" do %>
+                        <span class="fa fa-user side-icon-smart"></span>
+                    <% end %>
                     <span class="fa fa-user side-icon"></span>
                     <li>
                         <%= link_to "You", "#" %>
                     </li>
                 </div>
                 <div class="side-link-box">
+                    <%= link_to users_path do %>
+                        <span class="fa fa-users side-icon-smart"></span>
+                    <% end %>
                     <span class="fa fa-users side-icon"></span>
                     <li>
                         <%= link_to "Users", users_path %>
                     </li>
                 </div>
                 <div class="side-link-box">
+                    <%= link_to "#" do %>
+                        <span class="fa fa-cog side-icon-smart"></span>
+                    <% end %>
                     <span class="fa fa-cog side-icon"></span>
                     <li>
                         <%= link_to "Setting", "#" %>

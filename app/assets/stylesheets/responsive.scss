@@ -1,4 +1,10 @@
 @media all and (max-width: 767px){
+    $ber: rgb(253, 246, 227);
+    $back: rgb(23, 20, 18);
+    $word: rgb(199, 178, 153);
+    $word2: rgb(253, 246, 227);
+    $hover-back: rgb(173, 18, 18);
+
     .container {
         max-width: 767px;
     }
@@ -18,6 +24,27 @@
     .header-menu {
         display: none;
     }
+
+    .side-icon-smart {
+        font-size: 38px;
+        color: $back;
+        display: inline-block;
+        transition: 0.3s;
+            &:hover {
+                color: $hover-back;
+                font-size: 42px;
+            }
+    }
+
+    .side-icon {
+        display: none;
+    }
+
+    .side-link-box li {
+        display: none;
+    }
+    
+
 
 
 }
