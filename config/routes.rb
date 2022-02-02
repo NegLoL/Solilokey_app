@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   post "posts/create" => "posts#create"
   get "posts/:id" => "posts#show"
   post "posts/:id/destroy" => "posts#destroy"
+  get "search" => "posts#search"
 
   get "privateposts/new" => "privateposts#new"
   post "privateposts/create" => "privateposts#create"

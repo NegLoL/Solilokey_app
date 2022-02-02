@@ -9,6 +9,9 @@ class PostsController < ApplicationController
         @post = Post.find_by(id: params[:id])
     end
 
+    def search
+    end
+
     def create
         @post = Post.new(post_params)
         if @post.save && post_params_image[:image_name]

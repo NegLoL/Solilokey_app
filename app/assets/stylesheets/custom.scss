@@ -5,6 +5,7 @@ $word: rgb(199, 178, 153);
 $word2: rgb(253, 246, 227);
 $word3: rgb(97, 85, 70);
 $hover-back: rgb(173, 18, 18);
+$error: rgb(173, 18, 18);
 
 .container {
     max-width: 960px;
@@ -22,6 +23,7 @@ $hover-back: rgb(173, 18, 18);
 body {
     background-color: $back;
 }
+
 
 
 
