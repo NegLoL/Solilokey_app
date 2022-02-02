@@ -1,0 +1,41 @@
+<% provide(:title, "Private") %>
+
+<div class="container">
+
+    <%= render 'users/sideber' %>
+    
+    <div class="container2">
+        <div class="posts-page">
+            <div class="post-form">
+                <%= form_with model: @privatepost, url: "/privateposts/create" do |f| %>
+                    <%= f.text_area :content, class: "text-area", placeholder: "ここでの投稿はあなたにしか見えません" %>
+                    <%= f.file_field  :image_name, class: "form-area2" %>
+                    <%= f.submit "投稿", class: "submit2" %>
+                <% end %>
+            </div>
+            <div class="posts-box">
+                <% @privateposts.each do |privatepost| %>
+                    <div class="post-box">
+                        <div class="posts-box-left">
+                            <%= link_to privatepost.user do %>
+                                <img src="<%= "/user_images/#{privatepost.user.image_name}" %>">
+                            <% end %>
+                        </div>
+                        <div class="posts-box-right">
+                            <span class="post-name"><%= link_to "#{privatepost.user.name} 🔒", privatepost.user %></span>
+                            <span class="content"><%= link_to privatepost.content, "/privateposts/#{privatepost.id}" %></span>
+                            <% if privatepost.image_name %>
+                                <div class="post_image_box">
+                                    <%= link_to "/privateposts/#{privatepost.id}" do %>
+                                        <img src="<%= "/privatepost_images/#{privatepost.id}.jpg" %>" alt class="post_image" onerror="this.onerror = null; this.src='';"/>
+                                    <% end %>
+                                </div>
+                            <% end %>
+                            <span class="time"><%= privatepost.created_at.to_s(:datetime_jp) %></span>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

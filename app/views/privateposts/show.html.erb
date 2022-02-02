@@ -1,0 +1,37 @@
+<% provide(:title, @privatepost.content) %>
+<div class="container">
+
+    <%= render 'users/sideber' %>
+    
+    <div class="container2">
+        <div class="posts-page">
+            <div class ="return">
+                <%= link_to "/privateposts/new" do %>
+                    <p>←</p>
+                <% end %>
+            </div>
+            <div class="post-show">
+                <div class="post-show-user">
+                    <%= link_to @privatepost.user do %>
+                        <img src="<%= "/user_images/#{@privatepost.user.image_name}" %>">
+                    <% end %>
+                    <span class="post-name-show"><%= link_to "#{@privatepost.user.name} 🔒", @privatepost.user %></span>
+                </div>
+                <div class="post-show-content">
+                    <span class="content-show"><%= link_to @privatepost.content, "#" %></span>
+                    <% if @privatepost.image_name %>
+                        <div class="post_image_box">
+                            <%= link_to "/posts/#{@privatepost.id}" do %>
+                                <img src="<%= "/privatepost_images/#{@privatepost.id}.jpg" %>" alt class="post_image2" onerror="this.onerror = null; this.src='';"/>
+                            <% end %>
+                        </div>
+                    <% end %>
+                    <span class="time-show"><%= @privatepost.created_at.to_s(:datetime_jp) %></span>
+                </div>
+            </div>
+            <div class="post-destroy">
+                <%= link_to("投稿を削除する", "/privateposts/#{@privatepost.id}/destroy", {method: "post"}) %>
+            </div>
+        </div>
+    </div>
+</div>
