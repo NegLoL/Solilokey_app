@@ -12,7 +12,9 @@
             <ul class="users-box">
                 <% @users.each do |user| %>
                     <li>
-                        <img src="<%= "/user_images/#{user.image_name}" %>">
+                        <%= link_to user do %>
+                            <img src="<%= "/user_images/#{user.image_name}" %>">
+                        <% end %>
                         <%= link_to user.name, user %>
                     </li>
                 <% end %>

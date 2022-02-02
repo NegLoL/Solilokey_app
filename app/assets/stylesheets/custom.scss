@@ -3,6 +3,7 @@ $ber: rgb(253, 246, 227);
 $back: rgb(23, 20, 18);
 $word: rgb(199, 178, 153);
 $word2: rgb(253, 246, 227);
+$word3: rgb(97, 85, 70);
 $hover-back: rgb(173, 18, 18);
 
 .container {
@@ -321,7 +322,151 @@ header {
 }
 
 
+/* posts new */
+.posts-page {
+    border-right: 1px solid $word;
+    height: 100vh;
+    border-top: 1px solid $word;
+}
 
+.post-form {
+    margin-top: 10px;
+}
+
+.text-area {
+    background-color: $back;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    color: $ber;
+    font-size: 18px;
+    outline: none;
+    transition: 0.3s;
+    display: inline-block;
+    border: none;
+    resize: none;
+    &:focus {
+        border-bottom: 3px solid $ber;
+    }
+}
+
+.submit2 {
+    width: 20%;
+    border-radius: 25px;
+    background-color: $ber;
+    transition: 0.3s;
+    height: 36px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    &:hover {
+        background-color: $hover-back;
+    }
+}
+
+.posts-box {
+    border-top: 1px solid $word;
+    padding: 10px 10px;
+}
+
+.post-box{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.posts-box-left {
+    float: left;
+    width: 10%;
+    img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        margin-top: 3px;
+    }
+}
+
+.content {
+    display: block;
+    a {
+        color: $word;
+        text-decoration-color: $back;
+        font-size: 17px;
+    }
+}
+
+
+
+.post-name a {
+    color: $word2;
+    text-decoration-color: $back;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    &:hover {
+        text-decoration-color: $word2;
+    }
+}
+
+.posts-box-right {
+    float: left;
+    width: 90%;
+    border-bottom: 1px solid $word3;
+}
+
+.time {
+    float: right;
+    color: $word;
+    font-size: 14px;
+}
+
+
+/* posts show */
+
+
+.post-show-user {
+    padding: 20px 20px 5px 20px;
+    img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    a {
+        color: $word2;
+        text-decoration-color: $back;
+        font-size: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+        &:hover {
+            text-decoration-color: $word2;
+        }
+    }
+
+
+}
+
+.post-show-content {
+    padding: 0px 20px 0px 30px;
+}
+
+.content-show {
+    display: block;
+    margin-top: 10px;
+    a {
+        color: $word;
+        font-size: 28px;
+        text-decoration-color: $back;
+    }
+}
+
+.time-show {
+    float: right;
+    color: $word;
+    font-size: 18px;
+    margin-top: 20px;
+}
 
 /* footer */
 .footer-ber {

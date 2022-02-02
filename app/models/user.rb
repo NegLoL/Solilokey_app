@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+    #postsの各外部キーに紐づける
+    has_many :posts
+    
     before_save { email.downcase! }
     has_secure_password
     attribute :image_name, :string, default: 'default_user.jpg'

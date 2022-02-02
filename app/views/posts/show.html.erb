@@ -1,0 +1,26 @@
+<% provide(:title, @post.content) %>
+
+<div class="container">
+
+    <%= render 'users/sideber' %>
+    
+    <div class="container2">
+        <div class="posts-page">
+            <div class="post-show">
+            
+                
+            
+                <div class="post-show-user">
+                    <%= link_to @post.user do %>
+                        <img src="<%= "/user_images/#{@post.user.image_name}" %>">
+                    <% end %>
+                    <span class="post-name-show"><%= link_to @post.user.name, @post.user %></span>
+                </div>
+                <div class="post-show-content">
+                    <span class="content-show"><%= link_to @post.content, "#" %></span>
+                    <span class="time-show"><%= @post.created_at.to_s(:datetime_jp) %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

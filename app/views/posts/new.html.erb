@@ -1,0 +1,33 @@
+<% provide(:title, "Home") %>
+
+<div class="container">
+
+    <%= render 'users/sideber' %>
+    
+    <div class="container2">
+        <div class="posts-page">
+            <div class="post-form">
+                <%= form_with model: @post, url: "/posts/create" do |f| %>
+                    <%= f.text_area :content, class: "text-area", placeholder: "文章を入力してください" %>
+                    <%= f.submit "投稿", class: "submit2" %>
+                <% end %>
+            </div>
+            <div class="posts-box">
+                <% @posts.each do |post| %>
+                    <div class="post-box">
+                        <div class="posts-box-left">
+                            <%= link_to post.user do %>
+                                <img src="<%= "/user_images/#{post.user.image_name}" %>">
+                            <% end %>
+                        </div>
+                        <div class="posts-box-right">
+                            <span class="post-name"><%= link_to post.user.name, post.user %></span>
+                            <span class="content"><%= link_to post.content, "/posts/#{post.id}" %></span>
+                            <span class="time"><%= post.created_at.to_s(:datetime_jp) %></span>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
