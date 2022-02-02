@@ -1,15 +1,16 @@
 <% provide(:title, @post.content) %>
-
 <div class="container">
 
     <%= render 'users/sideber' %>
     
     <div class="container2">
         <div class="posts-page">
+            <div class ="return">
+                <%= link_to "/posts/new" do %>
+                    <p>←</p>
+                <% end %>
+            </div>
             <div class="post-show">
-            
-                
-            
                 <div class="post-show-user">
                     <%= link_to @post.user do %>
                         <img src="<%= "/user_images/#{@post.user.image_name}" %>">
@@ -18,8 +19,18 @@
                 </div>
                 <div class="post-show-content">
                     <span class="content-show"><%= link_to @post.content, "#" %></span>
+                    <% if @post.image_name %>
+                        <div class="post_image_box">
+                            <%= link_to "/posts/#{@post.id}" do %>
+                                <img src="<%= "/post_images/#{@post.id}.jpg" %>" alt class="post_image2" onerror="this.onerror = null; this.src='';"/>
+                            <% end %>
+                        </div>
+                    <% end %>
                     <span class="time-show"><%= @post.created_at.to_s(:datetime_jp) %></span>
                 </div>
+            </div>
+            <div class="post-destroy">
+                <%= link_to("投稿を削除する", "/posts/#{@post.id}/destroy", {method: "post"}) %>
             </div>
         </div>
     </div>
