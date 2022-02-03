@@ -19,5 +19,8 @@ Rails.application.routes.draw do
   post "privateposts/create" => "privateposts#create"
   get "privateposts/:id" => "privateposts#show"
   post "privateposts/:id/destroy" => "privateposts#destroy"
+
+  post "likes/:id/create" => "likes#create"
+  post "likes/:id/destroy" => "likes#destroy"
   
 end

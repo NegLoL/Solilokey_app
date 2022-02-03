@@ -479,8 +479,55 @@ header {
     object-fit: contain;
 }
 
+.like-btn {
+    color: $word3;
+    transition: 0.3s;
+    &:hover {
+        color: $word2;
+    }
+}
+
+.like_box {
+    display: inline;
+}
+
+.like_box a {
+    text-decoration: none;
+}
+
+.like-btn-unlike {
+    color: $hover-back;
+}
+
+.like-count {
+    color: $word;
+}
+
 
 /* posts show */
+
+.like-btn2 {
+    color: $word3;
+    transition: 0.3s;
+    font-size: 20px;
+    &:hover {
+        color: $word2;
+    }
+}
+
+.like-btn-unlike2 {
+    color: $hover-back;
+    font-size: 20px;
+}
+
+.like-count2 {
+    color: $word;
+    font-size: 20px;
+}
+
+
+
+
 .return a {
     text-decoration: none;
 }
@@ -542,7 +589,6 @@ header {
     
     color: $word;
     font-size: 18px;
-    margin-top: 20px;
     display: block;
 }
 

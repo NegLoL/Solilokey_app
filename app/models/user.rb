@@ -2,6 +2,7 @@ class User < ApplicationRecord
     #各外部キーに紐づける
     has_many :posts
     has_many :privateposts
+    has_many :likes
     
     before_save { email.downcase! }
     has_secure_password

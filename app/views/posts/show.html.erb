@@ -26,6 +26,20 @@
                             <% end %>
                         </div>
                     <% end %>
+                    <% if Like.find_by(user_id: current_user.id, post_id: @post.id) %>
+                        <div class="like_box">
+                            <%= link_to "/likes/#{@post.id}/destroy", method: :post do %>
+                                <span class="fa fa-heart like-btn-unlike2"></span>
+                            <% end %>
+                        </div>
+                    <% else %>
+                        <div class="like_box">
+                            <%= link_to "/likes/#{@post.id}/create", method: :post do %>
+                                <span class="fa fa-heart like-btn2"></span>
+                            <% end %>
+                        </div>
+                    <% end %>
+                    <span class="like-count2"><%= @post.likes.count %></span>
                     <span class="time-show"><%= @post.created_at.to_s(:datetime_jp) %></span>
                 </div>
             </div>
