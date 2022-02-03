@@ -16,6 +16,7 @@ class PostsController < ApplicationController
         else
             @users = User.none
             @posts = Post.none
+            flash[:notice] ="ヒットしませんでした"
         end
     end
 

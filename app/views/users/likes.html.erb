@@ -1,4 +1,4 @@
-<% provide(:title, @user.name) %>
+<% provide(:title, "Likes") %>
 
 <div class="container">
 
@@ -21,7 +21,8 @@
                 </div>
             </div>
             <div class="posts-box">
-                <% @posts.each do |post| %>
+                <% @likes.each do |like| %>
+                <% post = Post.find_by(id: like.post_id) %>
                     <div class="post-box">
                         <div class="posts-box-left">
                             <%= link_to post.user do %>
