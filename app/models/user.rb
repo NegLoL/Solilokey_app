@@ -1,8 +1,8 @@
 class User < ApplicationRecord
     #各外部キーに紐づける
-    has_many :posts
-    has_many :privateposts
-    has_many :likes
+    has_many :posts, dependent: :destroy
+    has_many :privateposts, dependent: :destroy
+    has_many :likes, dependent: :destroy
     
     before_save { email.downcase! }
     has_secure_password

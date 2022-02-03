@@ -16,12 +16,12 @@ class PostsController < ApplicationController
         else
             @users = User.none
             @posts = Post.none
-            flash[:notice] ="ヒットしませんでした"
         end
     end
 
     def create
         @post = Post.new(post_params)
+        @posts = Post.all
         if @post.save && post_params_image[:image_name]
             @post.image_name = "#{@post.id}.jpg"
             @post.save

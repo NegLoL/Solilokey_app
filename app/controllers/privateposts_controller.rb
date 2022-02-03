@@ -9,6 +9,7 @@ class PrivatepostsController < ApplicationController
     end
 
     def create
+        @privateposts = Privatepost.where(user_id: current_user.id)
         @privatepost = Privatepost.new(privatepost_params)
         if @privatepost.save && privatepost_params_image[:image_name]
             @privatepost.image_name = "#{@privatepost.id}.jpg"

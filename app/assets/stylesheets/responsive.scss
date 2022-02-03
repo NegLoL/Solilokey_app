@@ -17,9 +17,7 @@
         font-size: 20px;
     }
 
-    .menu-icon {
-        display: block;
-    }
+    
 
     .header-menu {
         display: none;
@@ -43,7 +41,63 @@
     .side-link-box li {
         display: none;
     }
-    
+
+    .side-logo p {
+        display: none;
+    }
+
+    .posts-box-left {
+        display: none;
+    }
+
+    .posts-box-right {
+        width: 100%;
+    }
+
+    .setting1 {
+        display: block;
+        .dropdown-toggle {
+            font-size: 42px;
+            color: $back;
+            transition: 0.3s;
+            text-decoration-color: $ber;
+            &:hover {
+                color: $hover-back;
+                font-size: 44px;
+                text-decoration-color: $ber;
+            }
+        }
+    }
+
+    .setting2 {
+        display: block;
+        float: right;
+        .dropdown-toggle {
+            font-size: 44px;
+            color: $back;
+            transition: 0.3s;
+            text-decoration-color: $ber;
+            margin-right: 100px;
+            &:hover {
+                color: $hover-back;
+                text-decoration-color: $ber;
+            }
+        }
+    }
+
+    .content-show a {
+        font-size: 22px;
+        color: $word2;
+    }
+
+    .time-show {
+        font-size: 14px;
+    }
+
+    .post-destroy a{
+        font-size: 12px;
+    }
+
 
 
 

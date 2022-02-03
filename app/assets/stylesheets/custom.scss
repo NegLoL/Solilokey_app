@@ -7,6 +7,8 @@ $word3: rgb(97, 85, 70);
 $hover-back: rgb(173, 18, 18);
 $error: rgb(173, 18, 18);
 
+
+
 .container {
     max-width: 960px;
     width: 100%;
@@ -24,9 +26,17 @@ body {
     background-color: $back;
 }
 
+/* error */
+.error_explanation li{
+    color: red;
+    font-size: 14px;
+}
 
-
-
+/* flash */
+.flash-danger {
+    color: red;
+    font-size: 14px;
+}
 /* header */
 
 header {
@@ -82,17 +92,8 @@ header {
     }
 }
 
-.menu-icon {
+.setting2 {
     display: none;
-    float: right;
-    color: $back;
-    font-size: 40px;
-    padding-top: 10px;
-    padding-right: 20px;
-    transition: 0.3s;
-    &:hover {
-        color: $hover-back;
-    }
 }
 
 
@@ -115,7 +116,7 @@ header {
 }
 
 .btn-start {
-    width: 150px;
+    width: 120px;
     padding: 5px 0;
     background-color: $ber;
     border-radius: 15px;
@@ -197,23 +198,9 @@ header {
     height: 100vh;  /* IE9以下は死ぬ */
 }
 
-.side-logo {
-    margin-top: 300px;
-    height: 80px;
-        p {
-            color: $back;
-            font-family: "old english text mt";
-            font-size: 28px;
-            float: right;
-            margin-right: 22px;
-            line-height: 6px;
-        }
-        img {
-            width: 64px;
-            margin-left: 26px;
-        }
+.side-links {
+    margin-top: 20px;
 }
-
 
 .side-link-box {
     width: 100%;
@@ -245,7 +232,13 @@ header {
     display: none;
 }
 
+.bootstrap {
+    @import "bootstrap";
+}
 
+.setting1 {
+    display: none;
+}
 
 /* user show */
 .user-page {
@@ -310,6 +303,13 @@ header {
 .edit-user-page {
     border-right: 1px solid $word;
     height: 100vh;
+    border-top: 1px solid $word;
+    overflow: auto;
+
+}
+
+.edit-user-page::-webkit-scrollbar {
+    display:none;
 }
 
 .blank {
@@ -340,6 +340,10 @@ header {
         text-decoration: none;
         font-size: 26px;
         margin-left: 10px;
+        transition: 0.3s;
+        &:hover {
+            color: $word2;
+        }
     }
 }
 
@@ -600,7 +604,7 @@ header {
     display: block;
     margin-top: 10px;
     a {
-        color: $word;
+        color: $word2;
         font-size: 28px;
         text-decoration-color: $back;
     }

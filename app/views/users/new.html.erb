@@ -5,7 +5,9 @@
 <div class="new-user-page">
     <div class="container">
         <div class="form-box">
-            <%= form_with model: @user do |f| %>
+            <%= form_with model: @user, local: true do |f| %>
+                <%= render "users/error_messages" %>
+
                 <%= f.label :name %>
                 <%= f.text_field :name, class: "form-area" %>
 

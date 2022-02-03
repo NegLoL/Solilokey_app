@@ -16,7 +16,27 @@
                     <%= link_to "ログイン", login_path %>
                 </li>
             </ul>
-            <span class="fa fa-bars menu-icon"></span>
+            
+            <div class="bootstrap">
+            <div class="setting2">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        🈪 <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><%= link_to "Solilokeyとは", "/about" %></li>
+                        <li class="divider"></li>
+                        <li>
+                            <%= link_to "新規登録", new_user_path %>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <%= link_to "ログイン", login_path %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
         </nav> 
     </div>
 </header>

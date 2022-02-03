@@ -9,7 +9,9 @@
             <div class ="blank">
             </div>
             <div class="form-box">
-                <%= form_with model: @user do |f| %>
+                <%= form_with model: @user, local: true do |f| %>
+                    <%= render "users/error_messages" %>
+
                     <%= f.label :name %>
                     <%= f.text_field :name, class: "form-area" %>
 
@@ -24,6 +26,9 @@
 
                     <%= f.submit "変更する", class: "submit" %>
                 <% end %>
+            </div>
+            <div class="post-destroy">
+                <%= link_to "アカウントを削除する", @user, method: :delete, data: { confirm: "本当にアカウントを削除しますか??" } %>
             </div>
         </div>
     </div>
