@@ -10,6 +10,13 @@ class PostsController < ApplicationController
     end
 
     def search
+        if params[:keyword].present?
+            @users = User.where("name like ?", "%#{params[:keyword]}%")
+            @posts = Post.search(params[:keyword])
+        else
+            @users = User.none
+            @posts = Post.none
+        end
     end
 
     def create

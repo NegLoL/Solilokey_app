@@ -8,7 +8,7 @@
         <div class="posts-page">
             <div class="post-form">
                 <%= form_with model: @privatepost, url: "/privateposts/create" do |f| %>
-                    <%= f.text_area :content, class: "text-area", placeholder: "ここでの投稿はあなたにしか見えません" %>
+                    <%= f.text_area :content, class: "text-area", placeholder: "ここでの投稿はあなたにしか表示されません" %>
                     <%= f.file_field  :image_name, class: "form-area2" %>
                     <%= f.submit "投稿", class: "submit2" %>
                 <% end %>

@@ -6,14 +6,25 @@
     
     <div class="container2">
         <div class="posts-page">
-            <div class="post-form">
-                <%= form_with model: @post, url: "/posts/create" do |f| %>
-                    <%= f.text_area :content, class: "text-area", placeholder: " 文章を入力してください" %>
-                    <%= f.file_field  :image_name, class: "form-area2" %>
-                    <%= f.submit "投稿", class: "submit2" %>
+            <div class="post-form2">
+                <%= form_with url: search_path, method: :get, local: true do |f| %>
+                    <%= f.text_field :keyword, class: "text-area2", placeholder: " キーワード検索" %>
+                    <%= f.submit "検索", class: "submit3" %>
                 <% end %>
             </div>
-            <div class="posts-box">
+            <div class="border-search">
+            </div>
+            <ul class="users-box">
+                <% @users.each do |user| %>
+                    <li>
+                        <%= link_to user do %>
+                            <img src="<%= "/user_images/#{user.image_name}" %>">
+                        <% end %>
+                        <%= link_to user.name, user %>
+                    </li>
+                <% end %>
+            </ul>
+            <div class="posts-box2">
                 <% @posts.each do |post| %>
                     <div class="post-box">
                         <div class="posts-box-left">

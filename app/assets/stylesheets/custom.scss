@@ -317,7 +317,7 @@ header {
 
 .users-box li {
     list-style-type: none;
-    border-bottom: 1px solid $word;
+    border-bottom: 1px solid $word3;
     height: 90px;
     width: 90%;
     margin-bottom: 8px;
@@ -340,11 +340,27 @@ header {
     margin-top: 10px;
 }
 
+
 .text-area {
     background-color: $back;
     box-sizing: border-box;
     width: 100%;
     height: 80px;
+    color: $ber;
+    font-size: 18px;
+    outline: none;
+    display: inline-block;
+    border: none;
+    resize: none;
+    
+}
+
+
+.text-area2 {
+    background-color: $back;
+    box-sizing: border-box;
+    width: 70%;
+    height: 55px;
     color: $ber;
     font-size: 18px;
     outline: none;
@@ -379,8 +395,26 @@ header {
     }
 }
 
+.submit3 {
+    width: 20%;
+    background-color: $ber;
+    transition: 0.3s;
+    height: 55px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    float: right;
+    &:hover {
+        background-color: $hover-back;
+    }
+}
+
 .posts-box {
     border-top: 1px solid $word;
+    padding: 10px 10px;
+}
+
+.posts-box2 {
     padding: 10px 10px;
 }
 
@@ -526,6 +560,10 @@ header {
             text-decoration-color: $hover-back;
         }
     }
+}
+
+.border-search {
+    border-bottom: 1px solid $word;
 }
 
 
