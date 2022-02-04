@@ -1,4 +1,7 @@
 class PrivatepostsController < ApplicationController
+    before_action :authenticate_user
+    before_action :ensure_correct_user, {only: [:destroy, :show]}
+
     def new
         @privatepost = Privatepost.new
         @privateposts = Privatepost.where(user_id: current_user.id)
@@ -38,5 +41,12 @@ class PrivatepostsController < ApplicationController
 
         def privatepost_params_image
             params.require(:privatepost).permit(:image_name)
+        end
+
+        def ensure_correct_user
+            @privatepost = Privatepost.find_by(id: params[:id])
+            if @privatepost.user_id != current_user.id
+              redirect_to "/posts/new"
+            end
         end
 end

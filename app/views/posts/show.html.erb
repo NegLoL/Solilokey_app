@@ -44,7 +44,9 @@
                 </div>
             </div>
             <div class="post-destroy">
-                <%= link_to("投稿を削除する", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+                <% if current_user.id == @post.user_id %>
+                    <%= link_to("投稿を削除する", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+                <% end %>
             </div>
         </div>
     </div>

@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user, {only: [:index, :show, :edit, :update, :likes, :destroy]}
+  before_action :forbid_login_user, {only: [:new, :create]}
+  before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
+
   def new
     @user = User.new
   end
@@ -63,5 +67,11 @@ class UsersController < ApplicationController
     #user画像受け取り用　
     def user_params_image
       params.require(:user).permit(:image_name)
+    end
+
+    def ensure_correct_user
+      if current_user.id != params[:id].to_i
+        redirect_to "/posts/new"
+      end
     end
 end

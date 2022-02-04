@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+    before_action :authenticate_user
+    before_action :ensure_correct_user, {only: [:destroy]}
 
     def new
         @post = Post.new
@@ -49,5 +51,12 @@ class PostsController < ApplicationController
 
         def post_params_image
             params.require(:post).permit(:image_name)
+        end
+
+        def ensure_correct_user
+            @post = Post.find_by(id: params[:id])
+            if @post.user_id != current_user.id
+              redirect_to "/posts/new"
+            end
         end
 end
