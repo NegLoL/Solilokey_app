@@ -4,8 +4,30 @@
 
 <div class="about-page">
     <div class="container">
-        <!--ここで完成後に画像を使って大枠を説明-->
-        <%= link_to "新規登録", new_user_path %>
+        <div class="about-box">
+            <div class="about-word">
+                <h4>一般的なSNSです</h4>
+                <h4>近況や何気ない一言をユーザー同士で共有できます</h4>
+            </div>
+            <div class="about-img">
+                <img src="/open2-image.png" alt class="about_image" onerror="this.onerror = null; this.src='';"/>
+            </div>
+        </div>
+        <div class="about-box">
+            <div class="about-word">
+                <h4>SNSでストレスを抱えてしまうことはありませんか?</h4>
+                <h4>Priveteでの投稿はあなたにしか表示されません</h4>
+                <h4>不満や悩みを呟いて気持ちを整理しましょう</h4>
+                <h4>もちろんメモなど他の使い方もできます</h4>
+            </div>
+            <div class="about-img">
+                <img src="/private-image.png" alt class="about_image" onerror="this.onerror = null; this.src='';"/>
+            </div>
+        </div>
+        <h3>利用を始めよう</h3>
+        <div class="btn-start">
+            <%= link_to "新規登録", new_user_path %>
+        </div>
     </div>
 </div>
 
