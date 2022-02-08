@@ -1,24 +1,20 @@
-# README
+# Solilokey
+### 「soliloquy × Key」
+自分にしか表示されないプライベート投稿が可能なSNSアプリです。
+不満や悩みを呟いて気持ちを整理したり、メモなどに使用したりして、SNSでストレスを溜めないことがテーマです。
+ProgateやRailsチュートリアル（一部）、ネットで調べた知識をベースに作成しました。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### アプリURL
+https://solilokeyapp.herokuapp.com/
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 機能一覧
+- ユーザー登録、Sessionを用いたログインログアウト機能
+ - ユーザー編集
+ - ユーザー削除時、ユーザーに紐づいた投稿いいねを同時削除
+- 投稿機能
+ - 画像投稿
+- プライベート投稿機能
+- いいね機能
+- 検索機能
+ - ユーザーと投稿検索
+- レスポンシブルデザイン
