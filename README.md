@@ -1,10 +1,10 @@
 # Solilokey
-### 「soliloquy × Key」
+### 「Soliloquy × Key」
 自身にしか表示されないプライベートな投稿が可能なSNSアプリです。
 
 不満や悩みを呟いて気持ちを整理したり、メモなどに使用し、SNSでストレスを溜めないことがテーマです。
 
-ProgateやRailsチュートリアル（一部）、ネットで調べた知識をベースに作成しました。
+ProgateやRailsチュートリアル（一部）、ネットで学んだ知識をベースに作成しました。
 
 ### アプリURL
 https://solilokeyapp.herokuapp.com/
